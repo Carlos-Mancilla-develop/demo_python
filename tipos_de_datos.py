@@ -191,3 +191,91 @@ print()
 que_es = set()
 print("que_es:", que_es)
 print(type(que_es))
+
+print()
+# conjunto de tipos de datos mixtos
+mi_conjunto2 = {1.0, "Hola", (1, 2, 3)}
+print("mi_conjunto2:", mi_conjunto2)
+
+print()
+# un set no permite duplicados
+mi_conjunto3 = {1,2,2,2,3,3,4,4,5}
+print("mi_conjunto3:", mi_conjunto3)
+
+print()
+# obtener un set desde una lista
+mi_lista2 = [1,2,2,2,3,3,4,4,5]
+print("mi_lista2:", mi_lista2)
+mi_conjunto4 = set(mi_lista2)
+print("mi_conjunto4:", mi_conjunto4)
+
+print()
+# obtener una lista desde un set
+mi_lista3 = list(mi_conjunto4) 
+print("mi_lista3:", mi_lista3)
+
+print()
+# agregar un elemento a un set
+mi_conjunto4.add(6)
+print("mi_conjunto4:", mi_conjunto4)
+
+print()
+# eliminar un elemento de un set
+mi_conjunto4.remove(3)
+print("mi_conjunto4:", mi_conjunto4)
+print("mi_conjunto2:", mi_conjunto2)
+mi_conjunto2.remove("Hola")
+print("mi_conjunto2:", mi_conjunto2)
+
+print()
+# preparar para el ejemplo de borrado con discard
+mi_conjunto2.add("Hola")
+# Eliminar usando discard
+print("mi_conjunto2:", mi_conjunto2)
+mi_conjunto2.discard("hola")
+print("mi_conjunto2:", mi_conjunto2)
+mi_conjunto2.discard("Hola")
+print("mi_conjunto2:", mi_conjunto2)
+
+print()
+# ejemplo intersección
+mi_conjunto_x = {"apple", "banana", "cherry"}
+mi_conjunto_y = {"google", "microsoft", "apple"}
+
+mi_conjunto_z = mi_conjunto_x.intersection(mi_conjunto_y)
+
+print("mi_conjunto_z:", mi_conjunto_z)
+
+print()
+# ejemplo agregar multiples elementos al set usando update
+print("mi_conjunto_x:", mi_conjunto_x)
+print("mi_conjunto_y:", mi_conjunto_y)
+mi_conjunto_x.update(mi_conjunto_y)
+print("mi_conjunto_x:", mi_conjunto_x)
+print("mi_conjunto_y:", mi_conjunto_y)
+
+print()
+mi_lista2 = [1,2,2,2,3,3,4,4,5]
+print("mi_lista2:", mi_lista2)
+print("mi_conjunto_x:", mi_conjunto_x)
+mi_conjunto_x.update(mi_lista2)
+print("mi_conjunto_x:", mi_conjunto_x)
+
+'''
+print()
+mi_lista4 = [1,5,6,7,[1,2,3]]
+print("mi_lista4:", mi_lista4)
+print("mi_conjunto_x:", mi_conjunto_x)
+mi_conjunto_x.update(mi_lista4) # deberia lanzar error
+print("mi_conjunto_x:", mi_conjunto_x)
+'''
+
+print()
+# ejemplo con union de sets
+mi_lista5 = [1,5,6,7]
+print("mi_lista5:", mi_lista5)
+print("mi_conjunto_x:", mi_conjunto_x)
+mi_conjunto_u = mi_conjunto_x.union(mi_lista5)
+print("mi_conjunto_u:", mi_conjunto_u)
+print("mi_lista5:", mi_lista5)
+print("mi_conjunto_x:", mi_conjunto_x)

@@ -191,3 +191,34 @@ for a in lista_tuplas2:
 
 for (a, b, c) in lista_tuplas2:
    print("a:", a, "b:", b, "c:", c)
+
+print()
+# iteración en un diccionario
+diccio = {
+  "nombre": "Juan",
+  "apellido": "Perez"
+}
+
+for clave, valor in diccio.items():
+   print("clave:", clave)
+   print("valor:", valor)
+
+print()
+# iteración sobre un string
+cadena_de_texto = "Ciencia es para todos"
+print("cadena_de_texto:", cadena_de_texto)
+for caracter in cadena_de_texto:
+  print(caracter)
+
+print()
+# iteracion for con bloque else
+digitos = [0, 1, 5]
+for i in digitos:
+  print("i:", i)
+  if (i == 1):
+    break
+else:
+ print("No quedan elementos en la lista.")
+
+print("después del for")
+
